@@ -1,7 +1,7 @@
 import math
 class car(Actor.Actor):
 
-    speed = 0.005
+    speed = 0.01
     A = 0.00
     B = 0.00
     PI = 3.141592
@@ -37,16 +37,18 @@ class car(Actor.Actor):
         
         return
     def OnMessage(self, msg, number, Vector4_lparm, Vector4_wparam):
-        if (msg == "KeyDown"):
+        if (msg == "KeyUp"):
             if( number == 0x41): #"A"
-                self.A -= 1
+                self.A -= 30
             elif( number == 0x44): #"D"
-                self.A += 1
-                #self.cartrans.Rotate(30,0,(0,1,0))
+                self.A += 30
+                self.cartrans.Rotate(30,0,(0,1,0))
             elif( number == 0x57): #"W"
-                self.speed += 0.005
+                self.speed += 0.01
             elif( number == 0x53): #"S"
-                self.speed -= 0.005
+                self.speed -= 0.01
+		if(msg == "Coll_dtect"):
+			self.speed=0
             
                 
             
