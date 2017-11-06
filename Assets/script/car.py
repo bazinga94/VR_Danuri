@@ -47,8 +47,9 @@ class car(Actor.Actor):
                 self.speed += 0.01
             elif( number == 0x53): #"S"
                 self.speed -= 0.01
-		if(msg == "Coll_dtect"):
-			self.speed=0
+        if(msg == "Coll_detect"):
+            print("coll")
+            speed=speed*-0.1
             
                 
             
