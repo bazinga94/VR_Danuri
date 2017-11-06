@@ -1,0 +1,14 @@
+public class SampleEsProgram: EActor
+{
+	public override int OnMessage(string msg, int arg0, Vector4 arg1, Vector4 arg2)
+	{
+		//¿Ã∫•∆Æ
+		return 0;
+	}
+
+	public override int Update()
+	{
+	printf("hello danuri");
+	return 0;
+	}
+}
