@@ -6,8 +6,15 @@ class car(Actor.Actor):
     Dflag = 0
     Wflag = 0
     Sflag = 0
-    A = 0.00
-    B = 0.00    
+    Rflag = 1 # 후진 기어 키면 -1
+    WA = 0.00 # Wheel Angle
+    CA = 0.00 # Car Angle
+
+    def R2A(self,R):
+        return (180*R/math.pi)  # 라디안 -> 도 (PI -> 180)
+    
+    def A2R(self,A):
+        return (A*math.pi/180)  # 도 -> 라디안 (180 -> PI)
 
     def __init__(self):
         self.car=Container(0)
@@ -26,17 +33,26 @@ class car(Actor.Actor):
     def Update(self):
         
         if (self.Wflag == 1):
-            self.speed += 0.001
+            self.speed += 0.001*self.Rflag
         if (self.Sflag == 1):
-            self.speed -= 0.001     
+            if (self.speed*self.Rflag  > 0):
+                self.speed -= 0.001*self.Rflag     
         if (self.Aflag == 1 ):
-            self.cartrans.Rotate(-1,0,(0,1,0))
-            self.B  -= 1
+            if(self.WA>-45):
+                self.WA  -= 0.2
         if (self.Dflag == 1 ):
-            self.cartrans.Rotate(1,0,(0,1,0))
-            self.B += 1       
-        self.carpos.x += self.speed*(math.cos((math.pi / 2) - (math.pi*(self.B/180))))
-        self.carpos.z += self.speed*(math.sin((math.pi / 2) - (math.pi*(self.B/180))))
+            if(self.WA<45):
+                self.WA += 0.2
+        if (self.speed != 0):
+            if(self.WA<0):
+                self.cartrans.Rotate(-10*self.speed,0,(0,1,0))
+                self.CA -= 10*self.speed
+            if(self.WA>0):
+                self.cartrans.Rotate(10*self.speed,0,(0,1,0))
+                self.CA += 10*self.speed
+                
+        self.carpos.x += self.speed*(math.sin(self.A2R(self.WA+self.CA)))
+        self.carpos.z += self.speed*(math.cos(self.A2R(self.WA+self.CA)))
         self.cartrans.SetPosition(self.carpos)
         
         return
@@ -45,15 +61,18 @@ class car(Actor.Actor):
         
         if (msg == "KeyDown"):
             
-            if( number == 0x41): #"A"
+            if( number == 0x41): #"A" : 핸들 좌로 꺾기
                 self.Aflag = 1
-            elif( number == 0x44): #"D"
+            elif( number == 0x44): #"D" : 핸들 우로 꺾기
                 self.Dflag = 1
-            elif( number == 0x57): #"W"
+            elif( number == 0x57): #"W" : 엑셀
                 self.Wflag = 1
-            elif( number == 0x53): #"S"
+            elif( number == 0x53): #"S" : 브레이크
                 self.Sflag = 1
-            
+            elif( number == 0x51) : #"Q" : 드라이브 기어
+                self.Rflag = 1
+            elif( number == 0x45) : #"E" : 후진 기어
+                self.Rflag = -1
         if (msg == "KeyUp"):
             
             if( number == 0x41): #"A"
