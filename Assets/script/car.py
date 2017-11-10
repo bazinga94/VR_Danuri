@@ -13,6 +13,7 @@ class car(Actor.Actor):
     grabhandle = False
     collchk = False
     colltimecnt=0
+    start = False
 
     def R2A(self,R):
         return (180*R/math.pi)  # 라디안 -> 도 (PI -> 180)
@@ -49,19 +50,29 @@ class car(Actor.Actor):
     def OnMessage(self, msg, number, Vector4_lparm, Vector4_wparam):
         
         if (msg == "KeyDown"):
+
+            if(self.start == True) :
             
-            if( number == 0x41): #"A" : 핸들 좌로 꺾기
-                self.Aflag = 1
-            elif( number == 0x44): #"D" : 핸들 우로 꺾기
-                self.Dflag = 1
-            elif( number == 0x57): #"W" : 엑셀
-                self.Wflag = 1
-            elif( number == 0x53): #"S" : 브레이크
-                self.Sflag = 1
-            elif( number == 0x51) : #"Q" : 드라이브 기어
-                self.Rflag = 1
-            elif( number == 0x45) : #"E" : 후진 기어
-                self.Rflag = -1
+                if( number == 0x41): #"A" : 핸들 좌로 꺾기
+                    self.Aflag = 1
+                elif( number == 0x44): #"D" : 핸들 우로 꺾기
+                    self.Dflag = 1
+                elif( number == 0x57): #"W" : 엑셀
+                    self.Wflag = 1
+                elif( number == 0x53): #"S" : 브레이크
+                    self.Sflag = 1
+                elif( number == 0x51) : #"Q" : 드라이브 기어
+                    self.Rflag = 1
+                elif( number == 0x45) : #"E" : 후진 기어
+                    self.Rflag = -1
+                elif( number == 0x0D) : #"ENTER" : 시동 끄기
+                    self.start = False
+                    
+            elif(self.start == False) :
+
+                if(number == 0X0D) : #"ENTER" : 시동 켜기
+                    self.start = True
+                    
         if (msg == "KeyUp"):
             
             if( number == 0x41): #"A"
