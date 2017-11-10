@@ -79,11 +79,10 @@ class car(Actor.Actor):
 
 
     def fricfunc(self):
-        print("fric")
         if(self.speed>self.fric):
             self.speed-=self.fric
-		elif(self.speed<0 && self.speed+self.fric<0)
-			self.speed+=self.fric
+        elif(self.speed<0 and self.speed+self.fric<0):
+            self.speed+=self.fric
         if(self.grabhandle == False):
             if(self.WA>0):
                 self.WA-=self.handlefric
