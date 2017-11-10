@@ -1,6 +1,5 @@
 import math
 class car(Actor.Actor):
-
     speed = 0.0
     Aflag = 0
     Dflag = 0
@@ -9,6 +8,11 @@ class car(Actor.Actor):
     Rflag = 1 # 후진 기어 키면 -1
     WA = 0.00 # Wheel Angle
     CA = 0.00 # Car Angle
+    fric = 0.0004
+    handlefric = 0.4
+    grabhandle = False
+    collchk = False
+    colltimecnt=0
 
     def R2A(self,R):
         return (180*R/math.pi)  # 라디안 -> 도 (PI -> 180)
@@ -31,30 +35,11 @@ class car(Actor.Actor):
     def OnDisable(self):
         return
     def Update(self):
-        
-        if (self.Wflag == 1):
-            self.speed += 0.001*self.Rflag
-        if (self.Sflag == 1):
-            if (self.speed*self.Rflag  > 0):
-                self.speed -= 0.001*self.Rflag     
-        if (self.Aflag == 1 ):
-            if(self.WA>-45):
-                self.WA  -= 0.2
-        if (self.Dflag == 1 ):
-            if(self.WA<45):
-                self.WA += 0.2
-        if (self.speed != 0):
-            if(self.WA<0):
-                self.cartrans.Rotate(-10*self.speed,0,(0,1,0))
-                self.CA -= 10*self.speed
-            if(self.WA>0):
-                self.cartrans.Rotate(10*self.speed,0,(0,1,0))
-                self.CA += 10*self.speed
-                
-        self.carpos.x += self.speed*(math.sin(self.A2R(self.WA+self.CA)))
-        self.carpos.z += self.speed*(math.cos(self.A2R(self.WA+self.CA)))
-        self.cartrans.SetPosition(self.carpos)
-        
+        self.inkey()
+        self.fricfunc()
+        if(self.collchk):
+            self.colliding()
+        self.move()
         return
     
     def OnMessage(self, msg, number, Vector4_lparm, Vector4_wparam):
@@ -86,11 +71,56 @@ class car(Actor.Actor):
                 
         if(msg == "Coll_detect"):
             print("coll")
-            speed=speed*-0.1
-            
-                
-            
+            self.speed=self.speed*-1
+            self.collchk=True
         return
 
 
-  
+
+
+    def fricfunc(self):
+        print("fric")
+        if(self.speed>self.fric):
+            self.speed-=self.fric
+		elif(self.speed<0 && self.speed+self.fric<0)
+			self.speed+=self.fric
+        if(self.grabhandle == False):
+            if(self.WA>0):
+                self.WA-=self.handlefric
+            elif(self.WA<0):
+                self.WA+=self.handlefric
+
+    def inkey(self):
+        self.grabhandle=False
+        if (self.Wflag == 1):
+            self.speed += 0.001*self.Rflag
+        if (self.Sflag == 1):
+            if (self.speed*self.Rflag  > 0):
+                self.speed -= 0 
+        if (self.Aflag == 1 ):
+            self.grabhandle=True
+            if(self.WA>-45):
+                self.WA  -= 0.1
+        if (self.Dflag == 1 ):
+            self.grabhandle=True
+            if(self.WA<45):
+                self.WA += 0.1
+        if (self.speed != 0):
+            if(self.WA<0):
+                self.cartrans.Rotate(-10*self.speed,0,(0,1,0))
+                self.CA -= 10*self.speed
+            if(self.WA>0):
+                self.cartrans.Rotate(10*self.speed,0,(0,1,0))
+                self.CA += 10*self.speed
+
+    def move(self):
+        self.carpos.x += self.speed*(math.sin(self.A2R(self.WA+self.CA)))
+        self.carpos.z += self.speed*(math.cos(self.A2R(self.WA+self.CA)))
+        self.cartrans.SetPosition(self.carpos)
+        
+    def colliding(self):
+        self.colltimecnt+=1
+        if(self.colltimecnt==4):
+            self.speed *= 0.02
+            self.collchk=False
+            self.colltimecnt=0
