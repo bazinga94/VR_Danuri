@@ -9,11 +9,10 @@ class car(Actor.Actor):
     WA = 0.00 # Wheel Angle
     CA = 0.00 # Car Angle
     fric = 0.0004
-    handlefric = 0.4
+    handlefric = 1
     grabhandle = False
     collchk = False
     colltimecnt=0
-    start = False
 
     def R2A(self,R):
         return (180*R/math.pi)  # 라디안 -> 도 (PI -> 180)
@@ -23,11 +22,15 @@ class car(Actor.Actor):
 
     def __init__(self):
         self.car=Container(0)
+        self.tire1=Container(0)
+        self.tire2=Container(0)
         return
     def OnCreate(self,uid):
         self.cartrans = self.car.FindComponentByType("TransformGroup")
         self.carpos = self.cartrans.GetPosition()
         self.carrot = self.cartrans.GetRotation()
+        self.tiretrans1 = self.tire1.FindComponentByType("TransformGroup")
+        self.tiretrans2 = self.tire2.FindComponentByType("TransformGroup")
         return
     def OnDestory(self):
         return
@@ -40,37 +43,25 @@ class car(Actor.Actor):
         self.fricfunc()
         if(self.collchk):
             self.colliding()
-        if(self.start):
-            self.move()
+        self.move()
         return
     
     def OnMessage(self, msg, number, Vector4_lparm, Vector4_wparam):
         
         if (msg == "KeyDown"):
-
-            if(self.start==True):
             
-                if( number == 0x41): #"A" : 핸들 좌로 꺾기
-                    self.Aflag = 1
-                elif( number == 0x44): #"D" : 핸들 우로 꺾기
-                    self.Dflag = 1
-                elif( number == 0x57): #"W" : 엑셀
-                    self.Wflag = 1
-                elif( number == 0x53): #"S" : 브레이크
-                    self.Sflag = 1
-                elif( number == 0x51) : #"Q" : 드라이브 기어
-                    self.Rflag = 1
-                elif( number == 0x45) : #"E" : 후진 기어
-                    self.Rflag = -1
-                elif( number == 0x0D) : #"ENTER" : 시동 끄기
-                    self.start = False
-                    
-            elif(self.start==False) :
-                
-                if( number == 0X0D) :  #"ENTER" : 시동 켜기
-                    self.start = True
-
-        
+            if( number == 0x41): #"A" : 핸들 좌로 꺾기
+                self.Aflag = 1
+            elif( number == 0x44): #"D" : 핸들 우로 꺾기
+                self.Dflag = 1
+            elif( number == 0x57): #"W" : 엑셀
+                self.Wflag = 1
+            elif( number == 0x53): #"S" : 브레이크
+                self.Sflag = 1
+            elif( number == 0x51) : #"Q" : 드라이브 기어
+                self.Rflag = 1
+            elif( number == 0x45) : #"E" : 후진 기어
+                self.Rflag = -1
         if (msg == "KeyUp"):
             
             if( number == 0x41): #"A"
@@ -108,15 +99,16 @@ class car(Actor.Actor):
             self.speed += 0.001*self.Rflag
         if (self.Sflag == 1):
             if (self.speed*self.Rflag  > 0):
-                self.speed -= 0 
+                self.speed -= 0
         if (self.Aflag == 1 ):
             self.grabhandle=True
+            
             if(self.WA>-45):
-                self.WA  -= 0.1
+                self.WA  -= 0.5
         if (self.Dflag == 1 ):
             self.grabhandle=True
             if(self.WA<45):
-                self.WA += 0.1
+                self.WA += 0.5
         if (self.speed != 0):
             if(self.WA<0):
                 self.cartrans.Rotate(-10*self.speed,0,(0,1,0))
@@ -124,6 +116,9 @@ class car(Actor.Actor):
             if(self.WA>0):
                 self.cartrans.Rotate(10*self.speed,0,(0,1,0))
                 self.CA += 10*self.speed
+        print(str(self.WA))
+        self.tiretrans1.SetLocalRotation(self.EulerToQuaternionFloat(Math3d.Vector3(0,self.A2R(self.WA),0))) #tire rotate
+        self.tiretrans2.SetLocalRotation(self.EulerToQuaternionFloat(Math3d.Vector3(0,self.A2R(self.WA),0))) #tire rotate
 
     def move(self):
         self.carpos.x += self.speed*(math.sin(self.A2R(self.WA+self.CA)))
@@ -136,3 +131,20 @@ class car(Actor.Actor):
             self.speed *= 0.02
             self.collchk=False
             self.colltimecnt=0
+
+    def EulerToQuaternionFloat(self,euler):
+        cosx2 = math.cos(euler.x / 2.0)
+        sinx2 = math.sin(euler.x / 2.0)
+        siny2 = math.sin(euler.y / 2.0)
+        cosy2 = math.cos(euler.y / 2.0)
+        sinz2 = math.sin(euler.z / 2.0)
+        cosz2 = math.cos(euler.z / 2.0)
+        
+        x = siny2 * cosx2 * sinz2 + cosy2 * sinx2 * cosz2
+        y = siny2 * cosx2 * cosz2 - cosy2 * sinx2 * sinz2
+        z = cosy2 * cosx2 * sinz2 - siny2 * sinx2 * cosz2
+        w = cosy2 * cosx2 * cosz2 + siny2 * sinx2 * sinz2
+        
+        r = Math3d.Vector4(x, y, z, w)
+
+        return r
