@@ -85,7 +85,7 @@ class car(Actor.Actor):
                 self.Sflag = 0
                 
         if(msg == "Coll_detect"):
-            print("coll")
+            #print("coll")
             self.speed=self.speed*-1
             self.collchk=True
 
@@ -133,7 +133,7 @@ class car(Actor.Actor):
     def inkey(self):
         self.grabhandle=False
         if (self.Wflag == 1):
-            self.speed += 0.001*self.Rflag
+            self.speed += 0.0005*self.Rflag
         if (self.Sflag == 1):
             if (self.speed*self.Rflag  > 0):
                 self.speed -= 0
@@ -153,7 +153,7 @@ class car(Actor.Actor):
             if(self.WA>0):
                 self.cartrans.Rotate(10*self.speed,0,(0,1,0))
                 self.CA += 10*self.speed
-        print(str(self.WA))
+        #print(str(self.WA))
         self.tiretrans1.SetLocalRotation(self.EulerToQuaternionFloat(Math3d.Vector3(0,self.A2R(self.WA),0))) #tire rotate
         self.tiretrans2.SetLocalRotation(self.EulerToQuaternionFloat(Math3d.Vector3(0,self.A2R(self.WA),0))) #tire rotate
 

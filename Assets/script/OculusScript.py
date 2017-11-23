@@ -49,7 +49,7 @@ class OculusScript(Actor.Actor):
 
         self.tick += 1
         
-        if(self.tick <= 250):
+        if(self.tick <= 20):
             return
         
         self.tick = 0
@@ -77,8 +77,8 @@ class OculusScript(Actor.Actor):
             #print("Touch : " + str(touchInfo))
             #print("ControllerType : " + str(controllerType))
 
-        self.LPos = None
-        self.RPos = None
+        #self.LPos = None
+        #self.RPos = None
 
         for i in range(0,2):
             
@@ -101,10 +101,10 @@ class OculusScript(Actor.Actor):
                     self.rightindexTrigger = DeviceInput.GetTrigger("Oculus", hand, False, 1)
 
                 
-                if i == 0:
-                    LPos = handPos
+                """if i == 0:
+                    #LPos = handPos
                 else:
-                    RPos = handPos
+                    #RPos = handPos"""
 
                 if doPrint:
                     #if i == 0:
@@ -115,7 +115,8 @@ class OculusScript(Actor.Actor):
                     #print("HandStatus : " + str(handStatus))
                              
                     if handStatus > 0 :
-                        #print("HandRot : " + str(handRot))
+                        
+                        print("HandRot : " + str(handRot))
                         print("HandPos : " + str(handPos))
                         #print("HandTrigger : " + str(handTrigger))
                         #print("IndexTrigger : " + str(indexTrigger))
@@ -148,14 +149,14 @@ class OculusScript(Actor.Actor):
                     self.CarScript.OnMessage("accel_on",0,Math3d.Vector4(0,0,0,0),Math3d.Vector4(0,0,0,0))
                     self.CarScript.OnMessage("break_off",0,Math3d.Vector4(0,0,0,0),Math3d.Vector4(0,0,0,0))
                 
-                if (self.righthandTrigger > 0.8 and (self.switchhandle==0 or self.switchhandle==1):
+                if (self.righthandTrigger > 0.8 and (self.switchhandle==0 or self.switchhandle==1)):
                     self.CarScript.OnMessage("right_on",0,Math3d.Vector4(0,0,0,0),Math3d.Vector4(0,0,0,0))
                     self.switchhandle = 1
                 else :
                     self.CarScript.OnMessage("right_off",0,Math3d.Vector4(0,0,0,0),Math3d.Vector4(0,0,0,0))
                     self.switchhandle = 0
 
-                if (self.lefthandTrigger>0.8 and (self.switchhandle ==0 or self.switchhandle == 2) :
+                if (self.lefthandTrigger>0.8 and (self.switchhandle ==0 or self.switchhandle == 2)) :
                     self.CarScript.OnMessage("left_on",0,Math3d.Vector4(0,0,0,0),Math3d.Vector4(0,0,0,0))
                     self.switchhandle= 2
                 else :
@@ -194,8 +195,8 @@ class OculusScript(Actor.Actor):
                         print("btnACheck")
 
 
-        hLength = (RPos - LPos).Length()
-        print("Dis = " + str(hLength))
+        #hLength = (RPos - LPos).Length()
+        #print("Dis = " + str(hLength))
 
         return
 
