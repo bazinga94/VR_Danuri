@@ -88,6 +88,32 @@ class car(Actor.Actor):
             print("coll")
             self.speed=self.speed*-1
             self.collchk=True
+
+
+        if(msg == "break_on"):
+            self.Sflag = 1
+        if(msg=="break_off"):
+            self.Sflag = 0
+        if(msg=="accel_on"):
+            self.Wflag = 1
+        if(msg=="accel_off"):
+            self.Wflag= 0
+        if(msg=="right_on"):
+            self.Dflag =1
+        if(msg=="right_off"):
+            self.Dflag=0
+        if(msg=="left_on"):
+            self.Aflag = 1
+        if(msg=="left_off"):
+            self.Aflag = 0
+        if(msg=="start"):
+            self.start = True
+        if(msg=="kill"):
+            self.start = False
+        if(msg == "forward"):
+            self.Rflag= 1
+        if(msg == "rear"):
+            self.Rflag=-1
         return
 
 
