@@ -2,7 +2,7 @@ import math
 import random
 class AI(Actor.Actor):
         
-        RL = 1.0 # 도로 길이
+        RL = 10.0 # 도로 길이
         Loc= [0,0,1]
         I = 0
         AIcarpos = Math3d.Vector3(0,0,0)
