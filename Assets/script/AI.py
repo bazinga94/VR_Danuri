@@ -161,23 +161,29 @@ class AI(Actor.Actor):
                 return
         def GetLoc(self):
 
-            self.Loc[0] = int(self.AIcarpos.x)
-            self.Loc[1] = int(self.AIcarpos.z)
+            self.Loc[0] = int(self.AIcarpos.x/self.RL)
+            self.Loc[1] = int(self.AIcarpos.z/self.RL)
 
-            if (self.AIcarpos.x == self.Loc[0]):
-                if((self.AIcarpos.z - self.Loc[1]) > (self.RL / 2)):
+            if (self.AIcarpos.x /self.RL  == self.Loc[0]):
+                if((self.AIcarpos.z/self.RL - self.Loc[1]) > (0.5)):
                     self.Loc[2] = 0
                     self.angle = -math.pi/2
-                elif((self.AIcarpos.z - self.Loc[1]) < (self.RL / 2)):
+                    print(self.Loc[0],self.Loc[1])
+                elif((self.AIcarpos.z/self.RL - self.Loc[1]) < (0.5)):
                     self.Loc[2] = 1
                     self.angle = math.pi/2
-            elif (self.AIcarpos.z == self.Loc[1]):
-                if((self.AIcarpos.x - self.Loc[0]) > (self.RL / 2)):
+                    print(self.Loc[0],self.Loc[1])
+            elif (self.AIcarpos.z/self.RL == self.Loc[1]):
+                if((self.AIcarpos.x/self.RL - self.Loc[0]) > (0.5)):
                     self.Loc[2] = 3
                     self.angle = 0
-                elif((self.AIcarpos.x - self.Loc[0]) < (self.RL / 2)):
+                    print(self.Loc[0],self.Loc[1])
+                elif((self.AIcarpos.x/self.RL - self.Loc[0]) < (0.5)):
                     self.Loc[2] = 2
                     self.angle = math.pi
+                    print(self.Loc[0],self.Loc[1])
+            else:
+                print("!!")
             return
         def GetPos(self):
                 if(self.Loc[2]==0):
