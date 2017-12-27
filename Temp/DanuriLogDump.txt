@@ -1,0 +1,577 @@
+Compile Shaders ... ShadowMap - ShadowMap
+Linking Shaders ...
+Shader Build Summary ...
+VertexShader Uniform Information : 
+  Proj : Index=0 Size=4 Offset=128 Type=float4x4 
+  World : Index=1 Size=4 Offset=0 Type=float4x4 
+  View : Index=2 Size=4 Offset=64 Type=float4x4 
+PixelShader Uniform Information : 
+PixelShader UniformSampler Information : 
+VertexShader Attribute Information : 
+  Position : Order=0, Index=0 Type=float3 Size=3
+VertexShader Attribute Information (Ordered): 
+  Position : Order=0, Type=float3 Size=3
+
+Shader Build Finished.
+Report Uniform Parameter 
+  Vertex Shader (Background) 
+  Pixel Shader (Background) 
+    ViewProjInverse : Index=0 Type=float4x4 Value=-0.55235136,-0.08326699,-99.99729156,99.31938171,-0.0,0.41633254,-39.998909,39.72775269,0.55234897,-0.08326618,-99.99729156,99.31938171,-0.0,0.0,-19.99945831,19.99995995
+    CameraPos : Index=7 Type=float4 Value=5.0,2.0,5.0,0.0
+    CameraDir : Index=6 Type=float4 Value=-0.68041384,-0.2721656,-0.68041378,0.0
+    ViewProj : Index=1 Type=float4x4 Value=-0.90522695,0.0,0.90522695,0.0,-0.44480065,2.22400308,-0.44480065,0.00000055,-0.68043083,-0.27217239,-0.68043083,7.2986517,-0.68041378,-0.27216557,-0.68041378,7.34846878
+    FarPlane : Index=9 Type=float4 Value=2000.0,0.0,0.0,0.0
+    BackgroundSunMatrix : Index=10 Type=float4x4 Value=-0.70710671,0.0,-0.70710689,-0.0,-0.40824839,0.81649655,0.40824828,-0.0,0.57735032,0.57735032,-0.5773502,-0.0,0.0,0.0,0.0,1.0
+    BackgroundSunSize : Index=11 Type=float4 Value=0.05,0.05,0.05,0.0
+    DrawGrid : Index=4 Type=float4 Value=0.0,0.0,0.0,0.0
+    Orthographic : Index=3 Type=float4 Value=0.0,0.0,0.0,0.0
+    BackgroundType : Index=2 Type=float4 Value=2.0,0.0,0.0,0.0
+    BackColor : Index=5 Type=float4 Value=0.1,0.1,0.2,1.0
+    GridInfo : Index=8 Type=float4 Value=2.0,0.5,0.0,0.0
+    BackgroundGamma : Index=14 Type=float4 Value=1.0,0.0,0.0,0.0
+    BackgroundMipMapInfo : Index=13 Type=float4 Value=1.0,0.0,11.0,0.0
+    EnvMapProjection : Index=12 Type=float4 Value=3.0,1.0,0.0,11.0
+Open Texture Assets/buildings14/K_BuildingsA_16.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_17.jpg
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_18.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_19.jpg
+CreateTexture2D11 - w = 1024, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_21.jpg
+CreateTexture2D11 - w = 256, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_22.jpg
+CreateTexture2D11 - w = 512, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_10.jpg
+CreateTexture2D11 - w = 256, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_08.jpg
+CreateTexture2D11 - w = 512, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_01.jpg
+CreateTexture2D11 - w = 1024, h = 745, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_02.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_05.jpg
+CreateTexture2D11 - w = 790, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_06.jpg
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_07.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_09.jpg
+CreateTexture2D11 - w = 512, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_11.jpg
+CreateTexture2D11 - w = 256, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_12.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_39.jpg
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_40.jpg
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_41.jpg
+Open Texture Temp/Converted/Assets_K_BuildingsA_41.png
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_42.jpg
+CreateTexture2D11 - w = 1024, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_43.jpg
+CreateTexture2D11 - w = 1024, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_45.jpg
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_37.jpg
+CreateTexture2D11 - w = 567, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_03.jpg
+CreateTexture2D11 - w = 1024, h = 745, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_04.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_13.jpg
+CreateTexture2D11 - w = 256, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_14.jpg
+CreateTexture2D11 - w = 1024, h = 529, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_28.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_29.jpg
+CreateTexture2D11 - w = 1024, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_30.jpg
+CreateTexture2D11 - w = 1024, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_31.jpg
+CreateTexture2D11 - w = 256, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_32.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_33.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_27.jpg
+CreateTexture2D11 - w = 512, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_36.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_15.jpg
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_25.jpg
+CreateTexture2D11 - w = 790, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_26.jpg
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_34.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_38.jpg
+CreateTexture2D11 - w = 606, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_35.jpg
+CreateTexture2D11 - w = 699, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_44.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/buildings14/K_BuildingsA_46.jpg
+Open Texture Temp/Converted/Assets_K_BuildingsA_46.png
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/TradeTent/Flag.tga
+Open Texture Assets/TradeTent/TradeTent1.fbm/Flag.tga
+------------------------log 24bit, 500 500 C:\Users\simon\Desktop\danuri_sample_3\Assets\TradeTent\TradeTent1.fbm\Flag.tga
+Open Texture Temp/Converted/Assets_Flag.png
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/TradeTent/Wood.tga
+Open Texture Assets/TradeTent/TradeTent1.fbm/Wood.tga
+------------------------log 24bit, 500 500 C:\Users\simon\Desktop\danuri_sample_3\Assets\TradeTent\TradeTent1.fbm\Wood.tga
+Open Texture Temp/Converted/Assets_Wood.png
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/TradeTent/Metal.tga
+Open Texture Assets/TradeTent/TradeTent1.fbm/Metal.tga
+------------------------log 32bit, 500 500 C:\Users\simon\Desktop\danuri_sample_3\Assets\TradeTent\TradeTent1.fbm\Metal.tga
+Open Texture Temp/Converted/Assets_Metal.png
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/TradeTent/Wood1.tga
+Open Texture Assets/TradeTent/TradeTent1.fbm/Wood1.tga
+------------------------log 32bit, 500 500 C:\Users\simon\Desktop\danuri_sample_3\Assets\TradeTent\TradeTent1.fbm\Wood1.tga
+Open Texture Temp/Converted/Assets_Wood1.png
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Big_Old_House_textures/city_house_2_Col.jpg
+CreateTexture2D11 - w = 2048, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/Ground.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/House_01.png
+CreateTexture2D11 - w = 2048, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/House_02.png
+CreateTexture2D11 - w = 2048, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/Tower.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/Rock_01.png
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/Street lamp_01.png
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/Scene+game/House_03.png
+CreateTexture2D11 - w = 2048, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Rebuilding Tangent Space for 2 Polygons
+Open Texture Assets/road4/asphalt.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/car_mash_6/AC Cobra/pirelli_pzero_255_35_r20_sidewall (1).png
+Open Texture Temp/Converted/Assets_pirelli_pzero_255_35_r20_sidewall (1).png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Loading Actor Python $project/Assets/script/car.py
+Compile Shaders ... DefaultFrame - TestFrameRed
+Cannot Load Pixel Shader File TestFrameRed C:/Danuri-VR/enginedata/hls11/TestFrameRed.Pixel.hls
+Resource::Shader Compile Error TestFrameRed
+
+Shader Build Finished.
+Resource::Shader Program Compile Error DefaultFrame TestFrameRed
+
+Compile Shaders ... DefaultFrame - TestFrameRedPBR
+Cannot Load Pixel Shader File TestFrameRedPBR C:/Danuri-VR/enginedata/hls11/TestFrameRedPBR.Pixel.hls
+Resource::Shader Compile Error TestFrameRedPBR
+
+Shader Build Finished.
+Resource::Shader Program Compile Error DefaultFrame TestFrameRedPBR
+
+Open Texture Texture.jpg
+CreateTexture2D11 - w = 64, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Rebuilding Tangent Space for 12 Polygons
+Loading Actor Python $project/Assets/script/car.py
+Loading Actor Python $project/Assets/script/car.py
+Open Texture Assets/bluecontainer/bluecon3.png
+Open Texture Temp/Converted/Assets_bluecon3.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/bluecontainer/Container_rods_SDR_Normal.png
+Open Texture Assets/bluecontainer/Container_rods_SDR_Normal.png
+Open Texture Assets/bluecontainer/Container_rods_SDR_Roughness.png
+Open Texture Assets/bluecontainer/Container_rods_SDR_Roughness.png
+Open Texture Assets/bluecontainer/bluecon1.png
+Open Texture Temp/Converted/Assets_bluecon1.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+ResourceFbxAnimation::Create Assets/road_element/trafficlight_2/semaforSimple.1.fani
+Open Texture Assets/road_element/trafficlight_2/semCrveno.jpg
+Open Texture Temp/Converted/Assets_semCrveno.png
+CreateTexture2D11 - w = 8, h = 8, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road_element/trafficlight_2/semZuto.jpg
+Open Texture Temp/Converted/Assets_semZuto.png
+CreateTexture2D11 - w = 8, h = 8, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road_element/trafficlight_2/semZeleno.jpg
+Open Texture Temp/Converted/Assets_semZeleno.png
+CreateTexture2D11 - w = 8, h = 8, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road_element/trafficlight_2/semMetal.jpg
+Open Texture Temp/Converted/Assets_semMetal.png
+CreateTexture2D11 - w = 8, h = 8, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/ParkFountainCanopy/Water_Po.jpg
+CreateTexture2D11 - w = 256, h = 256, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/ParkFountainCanopy/Transluc.jpg
+Open Texture Temp/Converted/Assets_Transluc.png
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/ParkFountainCanopy/_Translu.jpg
+Open Texture Temp/Converted/Assets__Translu.png
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/house/geto_house/geto_house.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road_element/street_elements_fbx/lamppost.tga
+Open Texture Assets/road_element/street_elements_fbx/textures/lamppost.tga
+------------------------log 24bit, 1024 1024 C:\Users\simon\Desktop\danuri_sample_3\Assets\road_element\street_elements_fbx\textures\lamppost.tga
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Loading Actor Python $project/Assets/script/sound.py
+Open Texture Assets/road4/T.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/straight3.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/curve.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/straight1.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/straight4.JPG
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/straight2.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/cross.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road4/cross.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/road_element/street_elements_fbx/mailbox.tga
+Open Texture Assets/road_element/street_elements_fbx/textures/mailbox.tga
+------------------------log 24bit, 1024 1024 C:\Users\simon\Desktop\danuri_sample_3\Assets\road_element\street_elements_fbx\textures\mailbox.tga
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree3/cgaxis_models_85_17_01.jpg
+Open Texture Assets/tree3/cgaxis_models_85_17_fbx.fbm/cgaxis_models_85_17_01.jpg
+CreateTexture2D11 - w = 512, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree3/cgaxis_models_85_17_01_bump.jpg
+Open Texture Assets/tree3/cgaxis_models_85_17_fbx.fbm/cgaxis_models_85_17_01_bump.jpg
+CreateTexture2D11 - w = 512, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree3/cgaxis_models_85_17_02.jpg
+Open Texture Assets/tree3/cgaxis_models_85_17_fbx.fbm/cgaxis_models_85_17_02.jpg
+Open Texture Temp/Converted/Assets_cgaxis_models_85_17_02.png
+CreateTexture2D11 - w = 2048, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree3/cgaxis_models_85_17_02_bump.jpg
+Open Texture Assets/tree3/cgaxis_models_85_17_fbx.fbm/cgaxis_models_85_17_02_bump.jpg
+Open Texture Temp/Converted/Assets_cgaxis_models_85_17_02_bump.png
+CreateTexture2D11 - w = 2048, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree4/cgaxis_models_85_12_02.jpg
+Open Texture Assets/tree4/cgaxis_models_85_12_fbx.fbm/cgaxis_models_85_12_02.jpg
+Open Texture Temp/Converted/Assets_cgaxis_models_85_12_02.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree4/cgaxis_models_85_12_02_bump.jpg
+Open Texture Assets/tree4/cgaxis_models_85_12_fbx.fbm/cgaxis_models_85_12_02_bump.jpg
+Open Texture Temp/Converted/Assets_cgaxis_models_85_12_02_bump.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/tree4/cgaxis_models_85_12_01.jpg
+Open Texture Assets/tree4/cgaxis_models_85_12_fbx.fbm/cgaxis_models_85_12_01.jpg
+CreateTexture2D11 - w = 512, h = 2048, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/container/mymycontainer_diffuse03.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/container/Container_rods_SDR_Normal.png
+CreateTexture2D11 - w = 4096, h = 4096, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/container/Container_rods_SDR_Roughness.png
+CreateTexture2D11 - w = 4096, h = 4096, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/container/mymycontainer_diffuse05.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/container/mymycontainer_diffuse01.png
+CreateTexture2D11 - w = 1024, h = 1024, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Loading Actor Python $project/Assets/script/container.py
+Loading Actor Python $project/Assets/script/crashing.py
+Loading Actor Python $project/Assets/script/crashing.py
+Loading Actor Python $project/Assets/script/crashing2.py
+Loading Actor Python $project/Assets/script/crashing2.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/car.py
+Loading Actor Python $project/Assets/script/car.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/crashing2.py
+Loading Actor Python $project/Assets/script/crashing2.py
+Loading Actor Python $project/Assets/script/crashing.py
+Loading Actor Python $project/Assets/script/crashing.py
+Loading Actor Python $project/Assets/script/container.py
+Open Texture Assets/road4/cross.jpg
+CreateTexture2D11 - w = 512, h = 512, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Loading Actor Python $project/Assets/script/sound.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Loading Actor Python $project/Assets/script/crashingcollision.py
+Open Texture Assets/navi/right.png
+Open Texture Temp/Converted/Assets_right.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/100.png
+Open Texture Temp/Converted/Assets_100.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Report Uniform Parameter 
+  Vertex Shader (Default) 
+    MatrixPalette : Index=18 Type=float4x4 Value= <Not Assigned>
+    ShadowInfo : Index=13 Type=float4 Value=0.5,1.0,1.0,0.0
+    ShadowMapInfo : Index=14 Type=float4 Value=0.0,0.05,0.0,1.0
+    ShadowMapInfo2 : Index=15 Type=float4 Value=0.001,1.0,0.0,0.0
+    DrawPhase : Index=7 Type=float4 Value=0.0,0.0,0.0,0.0
+    SunLight : Index=6 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0
+    CameraPos : Index=5 Type=float4 Value=3.13507414,1.28079987,-4.62765884,0.0
+    ViewProj : Index=0 Type=float4x4 Value=1.28018427,0.0,0.0,-4.01347256,0.0,2.31125164,0.0,-2.96025085,0.0,0.0,1.00002503,4.57777357...
+    UVInfo : Index=16 Type=float4 Value=0.0,0.0,1.0,1.0
+    Proj : Index=4 Type=float4x4 Value=1.28018427,0.0,0.0,0.0,0.0,2.31125164,0.0,0.0,0.0,0.0,1.00002503,-0.05000125,0.0,0.0...
+    World : Index=1 Type=float4x4 Value=20.0,0.0,0.0,-20.0,0.0,0.00001073,-99.99999237,0.0,0.0,179.99998474,0.00000596,60.0...
+    View : Index=3 Type=float4x4 Value=1.0,0.0,0.0,-3.13507414,0.0,1.0,0.0,-1.28079987,0.0,0.0,1.0,4.62765884,0.0,0.0,0.0...
+    WorldInverse : Index=2 Type=float4x4 Value=0.05,-0.0,-0.0,0.99999994,-0.0,0.0,0.00555556,-0.33333334,0.0,-0.01,0.0,-0.00000004...
+    UseMatrixPalette : Index=17 Type=float4 Value=0.0,0.0,0.0,0.0
+  Pixel Shader (Default) 
+    LightFactorSpotDirection : Index=19 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    MaterialSpecular : Index=11 Type=float4 Value=0.2,0.0,0.0,0.0
+    NormalMapDirection : Index=25 Type=float4 Value=1.0,1.0,1.0,1.0
+    AmbientColorRate : Index=14 Type=float4 Value=0.0,0.0,0.0,0.0
+    ShadowInfo : Index=2 Type=float4 Value=0.5,1.0,1.0,0.0
+    ShadowMapInfo : Index=3 Type=float4 Value=0.0,0.05,0.0,1.0
+    ShadowMapInfo2 : Index=4 Type=float4 Value=0.001,1.0,0.0,0.0
+    StaticSoftShadowInfo : Index=9 Type=float4 Value= <Not Assigned>
+    Glossiness : Index=15 Type=float4 Value=0.0,0.0,0.0,0.0
+    DrawPhase : Index=0 Type=float4 Value=0.0,0.0,0.0,0.0
+    SunLight : Index=24 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0
+    SoftShadowInfo4 : Index=8 Type=float4 Value= <Not Assigned>
+    CameraPos : Index=16 Type=float4 Value=3.13507414,1.28079987,-4.62765884,0.0
+    SoftShadowInfo3 : Index=7 Type=float4 Value= <Not Assigned>
+    ClipPlane : Index=1 Type=float4 Value=0.0,0.0,0.0,340282346638528859811704183484516925440.0
+    AmbientColor : Index=13 Type=float4 Value=1.0,1.0,1.0,1.0
+    AlphaTest : Index=28 Type=float4 Value=0.0,0.0,0.0,0.0
+    SoftShadowInfo : Index=5 Type=float4 Value= <Not Assigned>
+    MaterialDiffuse : Index=12 Type=float4 Value=1.0,0.0,0.0,0.0
+    SoftShadowInfo2 : Index=6 Type=float4 Value= <Not Assigned>
+    MaterialAmbient : Index=10 Type=float4 Value=0.2,0.0,0.0,0.0
+    FogFactor : Index=22 Type=float4 Value=0.0,0.0,100.0,0.0
+    Opacity : Index=21 Type=float4 Value=1.0,0.0,0.0,0.0
+    FocusingDistance : Index=37 Type=float4 Value=5.0,0.0,0.0,0.0
+    DOFEnable : Index=39 Type=float4 Value=0.0,0.0,0.0,0.0
+    FocalSize : Index=34 Type=float4 Value=0.0,0.0,0.0,0.0
+    BackgroundType : Index=29 Type=float4 Value=2.0,0.0,0.0,0.0
+    FarClamp : Index=38 Type=float4 Value=1.0,0.0,0.0,0.0
+    LightFactor : Index=18 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    LightFactorSpotFactor : Index=20 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    LightColor : Index=17 Type=float4 Value=1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    FogColor : Index=23 Type=float4 Value=1.0,1.0,1.0,1.0
+    ShadingModel : Index=26 Type=float4 Value=0.0,0.0,0.0,0.0
+    FocalDistance : Index=33 Type=float4 Value= <Not Assigned>
+    DiffuseColor : Index=27 Type=float4 Value=0.0,0.0,0.0,0.0
+    TextureGamma : Index=35 Type=float4 Value=1.0,0.0,0.0,0.0
+    InternalMipMapInfo : Index=30 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    EnvMapProjection : Index=31 Type=float4 Value=3.0,1.0,0.0,11.0
+    EnvironmentGamma : Index=36 Type=float4 Value=1.0,0.0,0.0,0.0
+    TextureUVTransform : Index=32 Type=float4 Value=0.0,0.0,1.0,1.0
+Report Uniform Parameter 
+  Vertex Shader (Default) 
+    MatrixPalette : Index=18 Type=float4x4 Value= <Not Assigned>
+    ShadowInfo : Index=13 Type=float4 Value=0.5,1.0,1.0,0.0
+    ShadowMapInfo : Index=14 Type=float4 Value=0.0,0.05,0.0,1.0
+    ShadowMapInfo2 : Index=15 Type=float4 Value=0.001,1.0,0.0,0.0
+    DrawPhase : Index=7 Type=float4 Value=0.0,0.0,0.0,0.0
+    SunLight : Index=6 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0
+    CameraPos : Index=5 Type=float4 Value=3.13507414,1.28079987,-4.62765884,0.0
+    ViewProj : Index=0 Type=float4x4 Value=1.28018427,0.0,0.0,-4.01347256,0.0,2.31125164,0.0,-2.96025085,0.0,0.0,1.00002503,4.57777357...
+    UVInfo : Index=16 Type=float4 Value=0.0,0.0,1.0,1.0
+    Proj : Index=4 Type=float4x4 Value=1.28018427,0.0,0.0,0.0,0.0,2.31125164,0.0,0.0,0.0,0.0,1.00002503,-0.05000125,0.0,0.0...
+    World : Index=1 Type=float4x4 Value=-1.0,-0.00000009,-0.0,23.91647339,0.0,0.00034899,-0.99999994,-0.00000244,0.00000009...
+    View : Index=3 Type=float4x4 Value=1.0,0.0,0.0,-3.13507414,0.0,1.0,0.0,-1.28079987,0.0,0.0,1.0,4.62765884,0.0,0.0,0.0...
+    WorldInverse : Index=2 Type=float4x4 Value=-1.0,0.0,0.00000009,23.91647339,-0.00000009,0.00034893,-0.99999994,-1.05446291,-0.0...
+    UseMatrixPalette : Index=17 Type=float4 Value=0.0,0.0,0.0,0.0
+  Pixel Shader (Default) 
+    LightFactorSpotDirection : Index=19 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    MaterialSpecular : Index=11 Type=float4 Value=0.2,0.0,0.0,0.0
+    NormalMapDirection : Index=25 Type=float4 Value=1.0,1.0,1.0,1.0
+    AmbientColorRate : Index=14 Type=float4 Value=0.0,0.0,0.0,0.0
+    ShadowInfo : Index=2 Type=float4 Value=0.5,1.0,1.0,0.0
+    ShadowMapInfo : Index=3 Type=float4 Value=0.0,0.05,0.0,1.0
+    ShadowMapInfo2 : Index=4 Type=float4 Value=0.001,1.0,0.0,0.0
+    StaticSoftShadowInfo : Index=9 Type=float4 Value= <Not Assigned>
+    Glossiness : Index=15 Type=float4 Value=0.0,0.0,0.0,0.0
+    DrawPhase : Index=0 Type=float4 Value=0.0,0.0,0.0,0.0
+    SunLight : Index=24 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0
+    SoftShadowInfo4 : Index=8 Type=float4 Value= <Not Assigned>
+    CameraPos : Index=16 Type=float4 Value=3.13507414,1.28079987,-4.62765884,0.0
+    SoftShadowInfo3 : Index=7 Type=float4 Value= <Not Assigned>
+    ClipPlane : Index=1 Type=float4 Value=0.0,0.0,0.0,340282346638528859811704183484516925440.0
+    AmbientColor : Index=13 Type=float4 Value=1.0,1.0,1.0,1.0
+    AlphaTest : Index=28 Type=float4 Value=0.0,0.0,0.0,0.0
+    SoftShadowInfo : Index=5 Type=float4 Value= <Not Assigned>
+    MaterialDiffuse : Index=12 Type=float4 Value=1.0,0.0,0.0,0.0
+    SoftShadowInfo2 : Index=6 Type=float4 Value= <Not Assigned>
+    MaterialAmbient : Index=10 Type=float4 Value=0.2,0.0,0.0,0.0
+    FogFactor : Index=22 Type=float4 Value=0.0,0.0,100.0,0.0
+    Opacity : Index=21 Type=float4 Value=1.0,0.0,0.0,0.0
+    FocusingDistance : Index=37 Type=float4 Value=5.0,0.0,0.0,0.0
+    DOFEnable : Index=39 Type=float4 Value=0.0,0.0,0.0,0.0
+    FocalSize : Index=34 Type=float4 Value=0.0,0.0,0.0,0.0
+    BackgroundType : Index=29 Type=float4 Value=2.0,0.0,0.0,0.0
+    FarClamp : Index=38 Type=float4 Value=1.0,0.0,0.0,0.0
+    LightFactor : Index=18 Type=float4 Value=-0.57735032,-0.57735032,0.5773502,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    LightFactorSpotFactor : Index=20 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    LightColor : Index=17 Type=float4 Value=1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    FogColor : Index=23 Type=float4 Value=1.0,1.0,1.0,1.0
+    ShadingModel : Index=26 Type=float4 Value=0.0,0.0,0.0,0.0
+    FocalDistance : Index=33 Type=float4 Value= <Not Assigned>
+    DiffuseColor : Index=27 Type=float4 Value=0.0,0.0,0.0,0.0
+    TextureGamma : Index=35 Type=float4 Value=1.0,0.0,0.0,0.0
+    InternalMipMapInfo : Index=30 Type=float4 Value=0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+    EnvMapProjection : Index=31 Type=float4 Value=3.0,1.0,0.0,11.0
+    EnvironmentGamma : Index=36 Type=float4 Value=1.0,0.0,0.0,0.0
+    TextureUVTransform : Index=32 Type=float4 Value=0.0,0.0,1.0,1.0
+Open Texture Gizmo.jpg
+CreateTexture2D11 - w = 128, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+CullStatus 217 / 375 / 0 / 380 / 33 (Pass/Visible/Box/Check/Occlusion)
+CullStatus 217 / 375 / 0 / 380 / 33 (Pass/Visible/Box/Check/Occlusion)
+Open Texture Assets/navi/left.png
+Open Texture Temp/Converted/Assets_left.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/400.png
+Open Texture Temp/Converted/Assets_400.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+CullStatus 217 / 375 / 0 / 380 / 54 (Pass/Visible/Box/Check/Occlusion)
+Open Texture Assets/navi/right.png
+Open Texture Temp/Converted/Assets_right.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/100.png
+Open Texture Temp/Converted/Assets_100.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/right.png
+Open Texture Temp/Converted/Assets_right.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/400.png
+Open Texture Temp/Converted/Assets_400.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+CullStatus 217 / 375 / 0 / 380 / 55 (Pass/Visible/Box/Check/Occlusion)
+Open Texture Assets/navi/left.png
+Open Texture Temp/Converted/Assets_left.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/100.png
+Open Texture Temp/Converted/Assets_100.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/left.png
+Open Texture Temp/Converted/Assets_left.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/200.png
+Open Texture Temp/Converted/Assets_200.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+CullStatus 217 / 375 / 0 / 380 / 72 (Pass/Visible/Box/Check/Occlusion)
+Open Texture Assets/navi/left.png
+Open Texture Temp/Converted/Assets_left.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/300.png
+Open Texture Temp/Converted/Assets_300.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/right.png
+Open Texture Temp/Converted/Assets_right.png
+CreateTexture2D11 - w = 256, h = 64, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+Open Texture Assets/navi/200.png
+Open Texture Temp/Converted/Assets_200.png
+CreateTexture2D11 - w = 256, h = 128, MipLevels = 1, Format = DYNAMIC
+CreateShaderSource11Texture2D - MipLevels = 1 MostDetailedMip = 0
+CullStatus 217 / 375 / 0 / 380 / 75 (Pass/Visible/Box/Check/Occlusion)
